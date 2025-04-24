@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forth and Flavours Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="home.html">Forth & Flavours</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="class.html">Book a Class</a></li>
+      <li><a href="login.html">Book a Class</a></li>
+  
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Welcome to Forth & Flavours</h1>
+      <p id="tagline"></p>
+      <a href="menu.html" class="cta-button">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <!-- Specials Section -->
+ <!-- Swiper Specials Section -->
+<section class="specials">
+  <div class="container">
+    <h2 class="specials-title">Today's Specials</h2>
+    <div class="swiper specials-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide special-item">
+          <img src="images/coffee.jpg" alt="Special Coffee" />
+          <p class="special-caption">Special Coffee</p>
+        </div>
+        <div class="swiper-slide special-item">
+          <img src="images/pastries.jpg" alt="Fresh Pastries" />
+          <p class="special-caption">Fresh Pastries</p>
+        </div>
+        <div class="swiper-slide special-item">
+          <img src="images/sandwich.jpeg" alt="Signature Sandwiches" />
+          <p class="special-caption">Signature Sandwiches</p>
+        </div>
+      </div>
+      <!-- Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- About Our Coffee -->
+<section class="about-coffee" data-aos="fade-up" data-aos-duration="1200">
+  <div class="container">
+    <h2>About Our Coffee</h2>
+    <p>
+      At <strong>Forth & Flavours</strong>, we source the finest Arabica beans from sustainable farms around the globe.
+      Each blend is roasted with care to bring out unique notes of chocolate, berries, citrus, and spices — 
+      ensuring every sip is memorable.
+    </p>
+  </div>
+</section>
+
+
+  <!-- Our Brewing Process -->
+<section class="process">
+  <h2 data-aos="fade-up">Our Brewing Process</h2>
+  <div class="process-steps">
+    <div class="step" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/sourced.jpeg" alt="Step 1 - Sourcing" />
+      <h3>Ethical Sourcing</h3>
+      <p>Partnering with small-batch growers for high-quality beans and fair practices.</p>
+    </div>
+    <div class="step" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/artisan.jpeg" alt="Step 2 - Roasting" />
+      <h3>Artisan Roasting</h3>
+      <p>Each batch is roasted in-house to highlight distinct flavor profiles.</p>
+    </div>
+    <div class="step" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/expert.jpeg" alt="Step 3 - Brewing" />
+      <h3>Expert Brewing</h3>
+      <p>From pour-overs to espresso, our baristas craft each cup with precision.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Testimonials Section -->
+<section class="testimonials" data-aos="fade-up">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-slider" id="testimonialSlider">
+    <div class="testimonial-item">
+      <p>"Best coffee I've ever had!" <span>– Emma</span></p>
+    </div>
+    <div class="testimonial-item">
+      <p>"The pastries are to die for!" <span>– John</span></p>
+    </div>
+    <div class="testimonial-item">
+      <p>"A cozy spot with amazing vibes." <span>– Sarah</span></p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="gallery">
+    <h2 data-aos="fade-up">Our Space & Vibes</h2>
+    <div class="gallery-grid">
+      <img src="images/coffee.jpg" alt="Cafe Interior" data-aos="zoom-in" data-aos-delay="100" />
+      <img src="images/coffee.jpg" alt="Latte Art" data-aos="zoom-in" data-aos-delay="200" />
+      <img src="images/coffee.jpg" alt="Seating Area" data-aos="zoom-in" data-aos-delay="300" />
+      <img src="images/coffee.jpg" alt="Outdoor Vibes" data-aos="zoom-in" data-aos-delay="400" />
+    </div>
+  </section>
+  
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Forth & Flavours | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  let index = 0;
+  const items = document.querySelectorAll(".testimonial-item");
+
+  function showTestimonial() {
+    items.forEach(item => item.classList.remove("active"));
+    items[index].classList.add("active");
+    index = (index + 1) % items.length;
+  }
+
+  showTestimonial(); // Show first testimonial
+  setInterval(showTestimonial, 4000); // Change every 4 seconds
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const specialsSwiper = new Swiper('.specials-swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+</body>
+</html>
