@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Class | Forth and Flavours Cafe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="home.html">Forth & Flavours</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="class.html">Book a Class</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Barista Class Section -->
+  <section class="class-section">
+    <div class="class-info">
+      <h2>Barista Training Class</h2>
+      <p>Join our hands-on barista class and learn the art of crafting the perfect coffee. From espresso making to latte art, our expert instructors will guide you through every step.</p>
+      <p><strong>Duration:</strong> 2 hours</p>
+      <p><strong>Price:</strong> $50 per person</p>
+      <p><strong>Location:</strong> Forth & Flavours Café</p>
+      <p>Classes are held every weekend. Book your spot today!</p>
+    </div>
+
+    <div class="booking-form">
+      <h3>Reserve Your Spot</h3>
+      <form action="submit_booking.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time:</label>
+        <select id="time" name="time" required>
+          <option value="morning">Morning (10:00 AM - 12:00 PM)</option>
+          <option value="afternoon">Afternoon (2:00 PM - 4:00 PM)</option>
+        </select>
+
+        <button type="submit" class="cta-button">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Forth & Flavours | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
